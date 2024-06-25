@@ -28,6 +28,8 @@ BenchmarkCreateSliceFromEmptySlice-16           	100000000	        11.36 ns/op
 BenchmarkCreateSliceFromSliceWithCapacity-16    	448725902	         2.974 ns/op
 BenchmarkCreateSliceFromMakeEmptySlice-16       	214379680	        12.32 ns/op
 BenchmarkCreateSliceFromSliceWithLength-16      	558077894	         2.256 ns/op
+
+The best performance is achieved when creating a slice with a specific length using make.
 */
 
 func BenchmarkCreateSliceFromNilSlice(b *testing.B) {
